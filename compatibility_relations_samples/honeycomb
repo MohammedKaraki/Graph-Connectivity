@@ -1,0 +1,14 @@
+gm8 -> t3 + t4;
+gm9 -> t3 + t4;
+m5(2) -> t3 + t4;
+
+gm8 -> sg3 + sg4;
+gm9 -> sg3 + sg4;
+k4 -> sg3;
+k5 -> sg4;
+k6 -> sg3 + sg4;
+
+m5(2) -> lm3 + lm4;
+k4 -> lm3;
+k5 -> lm4;
+k6 -> lm3 + lm4;
