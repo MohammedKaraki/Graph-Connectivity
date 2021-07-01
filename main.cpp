@@ -566,17 +566,17 @@ int main()
   auto ss = std::ostringstream{};
   ss << std::cin.rdbuf();
   SymmetryData data{ss.str()};
-  const auto line_irrep_copies =data.get_line_irrep_copies();
+  const auto line_irrep_copies = data.get_line_irrep_copies();
   const auto line_total_cols = std::accumulate(line_irrep_copies.begin(),
                                                line_irrep_copies.end(),
                                                0,
                                                [](auto sum, const auto& r) {
                                                  return sum + r.second;
                                                });
-  const auto column_idx =data.get_column_idx();
-  const auto point_num_irreps =data.get_point_num_irreps();
-  const auto point_irreps =data.get_point_irreps();
-  const auto row_idxs =data.get_row_idxs();
+  const auto column_idx = data.get_column_idx();
+  const auto point_num_irreps = data.get_point_num_irreps();
+  const auto point_irreps = data.get_point_irreps();
+  const auto row_idxs = data.get_row_idxs();
   const auto points = [&]{
     auto result = robin_hood::unordered_set<std::string>{};
     for (const auto& [key, _] : row_idxs) {
